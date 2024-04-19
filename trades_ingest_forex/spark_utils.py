@@ -9,7 +9,7 @@ class SparkUtils:
         # .master("local[*]") \
         spark_session = SparkSession.builder \
             .appName(exec_ctx.spark_app_name) \
-            .master("yarn") \
+            .master("local[*]") \
             .config("spark.submit.deployMode", "client") \
             .config("spark.executor.memory", "2g") \
             .config("spark.executor.cores", "2") \

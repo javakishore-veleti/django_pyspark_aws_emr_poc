@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-1#vnh0a(4$a+)^$fyv0xmaykes_jd__w!9#k13ky0&#1)*6rm3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -155,5 +155,3 @@ LOGGING = {
         },
     }
 }
-
-os.environ['HADOOP_CONF_DIR'] = '/path/to/hadoop/conf'

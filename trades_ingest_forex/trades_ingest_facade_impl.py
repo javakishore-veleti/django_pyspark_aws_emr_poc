@@ -4,11 +4,12 @@ import logging
 from trades_ingest_forex.wf_tasks.close_pyspark_session import ClosePySparkSession
 from trades_ingest_forex.wf_tasks.create_pyspark_session import CreatePySparkSession
 from trades_ingest_forex.wf_tasks.exec_copy_local_2_s3 import ExecCopyLocal2S3
+from trades_ingest_forex.wf_tasks.setup_hadoop_conf_paths import SetupHadoopConfPaths
 from trades_ingest_forex.wf_tasks_factory import WfTaskFactory
 
 logger = logging.getLogger(__file__)
 
-WF_TASK_IDS = [CreatePySparkSession.TASK_ID, ExecCopyLocal2S3.TASK_ID, ClosePySparkSession.TASK_ID]
+WF_TASK_IDS = [SetupHadoopConfPaths.TASK_ID, CreatePySparkSession.TASK_ID, ExecCopyLocal2S3.TASK_ID, ClosePySparkSession.TASK_ID]
 
 
 class TradesIngestFacadeImpl:
