@@ -1,0 +1,4 @@
+pandas==2.2.2
+pyspark==3.5.1
+# https://django-extensions.readthedocs.io/en/latest/runscript.html
+django-extensions==3.2.3
